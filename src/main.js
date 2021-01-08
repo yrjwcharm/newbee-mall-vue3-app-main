@@ -5,7 +5,7 @@ import store from './store'
 import router from './router'
 import 'lib-flexible/flexible'
 import 'vant/lib/index.css'; // 全局引入样式
-
+import '@/common/style/reset.css'
 const app = createApp(App) // 创建实例
 
 // 全局过滤器

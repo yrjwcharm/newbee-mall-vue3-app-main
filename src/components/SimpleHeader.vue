@@ -58,20 +58,20 @@ export default {
 <style lang="less" scoped>
   @import '../common/style/mixin';
   .simple-header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-    z-index: 10000;
+    //z-index: 10000;
     .fj();
     .wh(100%, 44px);
     line-height: 44px;
     padding: 0 10px;
     .boxSizing();
-    color: #252525;
+    color: #333;
     background: #fff;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #eeeeee;
     .simple-header-name {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 </style>

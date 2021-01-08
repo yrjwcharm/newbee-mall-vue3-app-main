@@ -14,15 +14,36 @@ import AddressEdit from '../views/AddressEdit.vue'
 import Order from '../views/Order.vue'
 import OrderDetail from '../views/OrderDetail.vue'
 
-
-
-
+//新页面
+import AddEnterprise from '../views/AddEnterprise'
+import  CreateEnterprise from '../views/CreateEnterprise'
+import SelectIndustry from '../views/SelectIndustry'
 const router = createRouter({
   history: createWebHashHistory(), // hash模式：createWebHashHistory，history模式：createWebHistory
   routes: [
+    // {
+    //   path: '/',
+    //   redirect: '/home'
+    // },
     {
-      path: '/',
-      redirect: '/home'
+      path:'/',
+      redirect:'/add'
+    },
+    {
+      path:'/add',
+      name:'add',
+      component:AddEnterprise,
+    },
+    {
+      path:'/create',
+      name:'create',
+      component:CreateEnterprise,
+
+    },
+    {
+      path:'/selectIndustry',
+      name:'selectIndustry',
+      component:SelectIndustry
     },
     {
       path: '/home',
@@ -43,7 +64,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: About, 
+      component: About,
       meta: {
         index: 2
       }
