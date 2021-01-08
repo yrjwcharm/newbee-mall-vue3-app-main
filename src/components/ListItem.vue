@@ -5,7 +5,7 @@
       <p style="font-size: 18px;
              color: #999999;">{{value}}</p>
     </div>
-    <img src="@/assets/enterprise/forward.svg" style="width: 18px;height:18px;">
+    <img src="@/assets/enterprise/forward.svg" style="width: 9px;height:17px;">
   </div>
 </template>
 

@@ -6,7 +6,7 @@
         <img :src="img" alt="" style="width:18px; height:18px">
         <span style=" margin-left: 10px; font-size: 16px;color: #333333;letter-spacing: 0.36px;">{{ title }}</span>
       </p>
-      <img :src="forward" alt="" style="width: 18px;height:18px;">
+      <img :src="forward" alt="" style="width: 9px;height:17px;">
     </div>
   </div>
 </template>

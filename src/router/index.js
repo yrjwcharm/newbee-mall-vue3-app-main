@@ -18,6 +18,9 @@ import OrderDetail from '../views/OrderDetail.vue'
 import AddEnterprise from '../views/AddEnterprise'
 import  CreateEnterprise from '../views/CreateEnterprise'
 import SelectIndustry from '../views/SelectIndustry'
+import EnterpriseInfo from '../views/EnterpriseInfo'
+
+
 const router = createRouter({
   history: createWebHashHistory(), // hash模式：createWebHashHistory，history模式：createWebHistory
   routes: [
@@ -45,6 +48,11 @@ const router = createRouter({
       name:'selectIndustry',
       component:SelectIndustry
     },
+    {
+      path:'/enterpriseInfo',
+      name:'/info',
+      component:EnterpriseInfo
+    } ,
     {
       path: '/home',
       name: 'home',
