@@ -22,7 +22,7 @@ import EnterpriseInfo from '../views/EnterpriseInfo'
 import EnterpriseVerify from '../views/EnterpriseVerify'
 import NameVerify from '../views/NameVerify'
 import UploadIncumbencyCertification from '../views/UploadIncumbencyCertification'
-
+import WriteEnterpriseInfo from '../views/WriteEnterpriseInfo'
 
 
 const router = createRouter({
@@ -72,6 +72,11 @@ const router = createRouter({
       path:'/upload-incumbency-certification',
       name:'upload-incumbency-certification',
       component:UploadIncumbencyCertification
+    },
+    {
+      path:'/write-enterprise-info',
+      name:'write',
+      component:WriteEnterpriseInfo
     },
     {
       path: '/home',

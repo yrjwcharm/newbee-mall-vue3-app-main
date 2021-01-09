@@ -4,7 +4,7 @@
     <div class="main">
      <step title="申请人实名认证" desc="需要身份证" :step="step1"  :stepNum=1 :myClick="()=>goTo('/name-verify',{})"/>
       <div style="background: #E5E5E5;width:1px;height: 20px;margin-left: 11.6618%" />
-      <step title="填写企业信息" desc="需要营业执照" :step="step2" :stepNum=2 />
+      <step title="填写企业信息" desc="需要营业执照" :step="step2" :stepNum=2 :myClick="()=>goTo('/write-enterprise-info',{})"/>
       <div style="background: #E5E5E5;width:1px;height: 20px;margin-left: 11.6618%"/>
       <step title="上传在职证明" desc="需要公章" :step="step3" :stepNum=3  :myClick="()=>goTo('/upload-incumbency-certification',{})"/>
     </div>
