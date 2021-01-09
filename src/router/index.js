@@ -16,12 +16,12 @@ import OrderDetail from '../views/OrderDetail.vue'
 
 //新页面
 import AddEnterprise from '../views/AddEnterprise'
-import  CreateEnterprise from '../views/CreateEnterprise'
+import CreateEnterprise from '../views/CreateEnterprise'
 import SelectIndustry from '../views/SelectIndustry'
 import EnterpriseInfo from '../views/EnterpriseInfo'
 import EnterpriseVerify from '../views/EnterpriseVerify'
 import NameVerify from '../views/NameVerify'
-
+import UploadIncumbencyCertification from '../views/UploadIncumbencyCertification'
 
 
 
@@ -52,6 +52,7 @@ const router = createRouter({
       name:'selectIndustry',
       component:SelectIndustry
     },
+
     {
       path:'/enterpriseInfo',
       name:'info',
@@ -66,6 +67,11 @@ const router = createRouter({
       path:'/name-verify',
       name:'name-verify',
       component:NameVerify
+    },
+    {
+      path:'/upload-incumbency-certification',
+      name:'upload-incumbency-certification',
+      component:UploadIncumbencyCertification
     },
     {
       path: '/home',

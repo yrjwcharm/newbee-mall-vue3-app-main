@@ -40,7 +40,7 @@
         </div>
       </div>
       <list label="企业认证" value="审核中" :border=false :isArrow=true color="#06B48D" :myClick="goToEnterpriseVerify"/>
-      <div style="margin-top: 10px; background: #FEFFFF;display: flex;height: 47px;">
+      <div @click="exitEnterprise" style="margin-top: 10px; background: #FEFFFF;display: flex;height: 47px;">
         <span style="margin: auto;font-size: 16px;color: #F42424;">解散企业</span>
       </div>
     </div>
@@ -52,6 +52,7 @@ import sHeader from "@/components/SimpleHeader"
 import list from "@/components/List"
 import {reactive, toRefs} from "vue";
 import {useRouter} from "vue-router";
+import {Dialog} from "vant";
 
 export default {
   name: "EnterpriseInfo",
@@ -69,9 +70,20 @@ export default {
     const goToEnterpriseVerify =()=>{
       router.push('/verify',{})
     }
+    const exitEnterprise=()=>{
+        Dialog.confirm({
+          title: '确认退出企业吗？',
+        }).then(() => {
+
+        }).catch(() => {
+          // on cancel
+        });
+
+    }
     return {
       ...toRefs(state),
-      goToEnterpriseVerify
+      goToEnterpriseVerify,
+      exitEnterprise
     }
 
   }

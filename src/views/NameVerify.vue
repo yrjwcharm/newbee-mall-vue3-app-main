@@ -46,14 +46,14 @@ export default {
   },
   setup() {
     const router = useRouter()
-    const frontRef = ref(null);
-    const backRef = ref(null);
     const state = reactive({
       front: '',
       back: '',
 
     })
-
+    const goBack = () => {
+      router.go(-1)
+    }
     const afterFrontRead=(file)=>{
       // 此时可以自行将文件上传至服务器
       const {content} =file;
@@ -69,7 +69,7 @@ export default {
       Toast('文件大小不能超过 500kb');
     }
     const submit = () => {
-
+        goBack();
     }
     const goTo = (r, query) => {
       router.push({path: r, query: query || {}})
@@ -78,6 +78,7 @@ export default {
       ...toRefs(state),
       submit,
       goTo,
+      goBack,
       afterFrontRead,
       afterBackRead,
       onOversize,
@@ -91,12 +92,13 @@ export default {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: #fff;
+  background: #f3f7f7;
 }
 
 .main {
   display: flex;
   flex: 1;
+  background: #FEFFFF;
   flex-direction: column;
   align-items: center;
   /*justify-content: center;*/

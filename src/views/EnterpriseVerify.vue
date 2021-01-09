@@ -6,7 +6,7 @@
       <div style="background: #E5E5E5;width:1px;height: 20px;margin-left: 11.6618%" />
       <step title="填写企业信息" desc="需要营业执照" :step="step2" :stepNum=2 />
       <div style="background: #E5E5E5;width:1px;height: 20px;margin-left: 11.6618%"/>
-      <step title="上传在职证明" desc="需要公章" :step="step3" :stepNum=3 />
+      <step title="上传在职证明" desc="需要公章" :step="step3" :stepNum=3  :myClick="()=>goTo('/upload-incumbency-certification',{})"/>
     </div>
     <div class="footer">
         <div style="display: flex;height:50px;background: #06B48D;">
