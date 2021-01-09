@@ -19,6 +19,10 @@ import AddEnterprise from '../views/AddEnterprise'
 import  CreateEnterprise from '../views/CreateEnterprise'
 import SelectIndustry from '../views/SelectIndustry'
 import EnterpriseInfo from '../views/EnterpriseInfo'
+import EnterpriseVerify from '../views/EnterpriseVerify'
+import NameVerify from '../views/NameVerify'
+
+
 
 
 const router = createRouter({
@@ -50,9 +54,19 @@ const router = createRouter({
     },
     {
       path:'/enterpriseInfo',
-      name:'/info',
+      name:'info',
       component:EnterpriseInfo
     } ,
+    {
+      path:'/verify',
+      name:'verify',
+      component:EnterpriseVerify
+    },
+    {
+      path:'/name-verify',
+      name:'name-verify',
+      component:NameVerify
+    },
     {
       path: '/home',
       name: 'home',

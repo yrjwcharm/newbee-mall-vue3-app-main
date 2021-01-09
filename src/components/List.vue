@@ -1,5 +1,5 @@
 <template>
-  <div style="background: #fff;padding-left: 10px;padding-right: 10px;">
+  <div @click="myClick" style="background: #fff;padding-left: 10px;padding-right: 10px;">
     <div :style="`display: flex;flex-direction: column;justify-content: center; height:45px;border-bottom:${border?'2px':0} solid #eee;`">
       <div style="display:flex;flex-direction: row;align-items: center;justify-content: space-between">
         <p style="font-size: 16px;color: #333333;">{{label}}</p>
@@ -35,7 +35,15 @@ export default {
     border:{
       type:Boolean,
       default:true
+    },
+    myClick: {
+      type:Function,
+      default:()=>{
+        return Function;
+      }
+
     }
+
 
   }
 

@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <list label="企业认证" value="审核中" :border=false :isArrow=true color="#06B48D"/>
+      <list label="企业认证" value="审核中" :border=false :isArrow=true color="#06B48D" :myClick="goToEnterpriseVerify"/>
       <div style="margin-top: 10px; background: #FEFFFF;display: flex;height: 47px;">
         <span style="margin: auto;font-size: 16px;color: #F42424;">解散企业</span>
       </div>
@@ -51,6 +51,7 @@
 import sHeader from "@/components/SimpleHeader"
 import list from "@/components/List"
 import {reactive, toRefs} from "vue";
+import {useRouter} from "vue-router";
 
 export default {
   name: "EnterpriseInfo",
@@ -60,12 +61,17 @@ export default {
     list,
   },
   setup() {
+    const router = useRouter();
     const state = reactive({
       username: '王琰龙',
       phone: '18311410379',
     })
+    const goToEnterpriseVerify =()=>{
+      router.push('/verify',{})
+    }
     return {
-      ...toRefs(state)
+      ...toRefs(state),
+      goToEnterpriseVerify
     }
 
   }
