@@ -23,6 +23,10 @@ import EnterpriseVerify from '../views/EnterpriseVerify'
 import NameVerify from '../views/NameVerify'
 import UploadIncumbencyCertification from '../views/UploadIncumbencyCertification'
 import WriteEnterpriseInfo from '../views/WriteEnterpriseInfo'
+import VerifyStatus from '../views/VerifyStatus'
+import AddMember from '../views/AddMember'
+import ShareTeamCode from '../views/ShareTeamCode'
+import JoinEnterprise from '../views/JoinEnterprise'
 
 
 const router = createRouter({
@@ -34,12 +38,23 @@ const router = createRouter({
     // },
     {
       path:'/',
-      redirect:'/add'
+      redirect:'/add-enterprise'
     },
     {
-      path:'/add',
-      name:'add',
+      path:'/add-enterprise',
+      name:'add-enterprise',
       component:AddEnterprise,
+    },
+    {
+      path:'/share-team-code',
+      name:'share-team-code',
+      component:ShareTeamCode
+    },
+    {
+      path:'/join-enterprise-organization-team',
+      name:'join',
+      component:JoinEnterprise
+
     },
     {
       path:'/create',
@@ -77,6 +92,16 @@ const router = createRouter({
       path:'/write-enterprise-info',
       name:'write',
       component:WriteEnterpriseInfo
+    },
+    {
+      path:'/verify-status',
+      name:'status',
+      component:VerifyStatus
+    },
+    {
+      path:'/add-member',
+      name:'add',
+      component:AddMember
     },
     {
       path: '/home',

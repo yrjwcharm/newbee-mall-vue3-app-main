@@ -29,7 +29,7 @@
       <list label="姓名" value="闫瑞锋"/>
       <list label="电话" value="18311410379" :border=false />
       <div style="background: #fff;margin-top: 10px; padding-left: 10px;padding-right: 10px;">
-        <div style="display: flex;flex-direction: column;justify-content: center; height:66px;border-bottom: 2px solid #eee;">
+        <div style="display: flex;flex-direction: column;justify-content: center; height:66px;border-bottom: 1px solid #eee;">
           <div style="display:flex;flex-direction: row;align-items: center;justify-content: space-between">
             <div>
               <p style="font-size: 16px;color: #333333;">添加成员</p>

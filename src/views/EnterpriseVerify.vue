@@ -9,7 +9,7 @@
       <step title="上传在职证明" desc="需要公章" :step="step3" :stepNum=3  :myClick="()=>goTo('/upload-incumbency-certification',{})"/>
     </div>
     <div class="footer">
-        <div style="display: flex;height:50px;background: #06B48D;">
+        <div style="display: flex;height:50px;background: #06B48D;" @click="submit">
           <span style="margin: auto;font-size: 16px;color: #FFFFFF;">提交审核</span>
         </div>
     </div>
@@ -37,10 +37,14 @@ export default {
       step2:false,
       step3:false,
     })
+    const submit =()=>{
+      goTo('/verify-status',{})
+    }
 
     return{
       ...toRefs(state),
       goTo,
+      submit
     }
   }
 }

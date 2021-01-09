@@ -1,10 +1,10 @@
 <template>
   <div class="add-box">
     <s-header :name="'添加'" :noback="true"></s-header>
-    <div style="margin-top: 20px;">
+    <div style="margin-top: 35px;">
       <listRow :onClick="()=>goTo('/create',{})"  :img="require('@/assets/enterprise/create.png')" title="创建企业、组织、团队" :forward="require('@/assets/enterprise/forward.svg')"/>
-      <listRow :img="require('@/assets/enterprise/join_in.png')" title="加入企业/组织/团队" :forward="require('@/assets/enterprise/forward.svg')"/>
-      <listRow :img="require('@/assets/enterprise/member.png')" title="添加成员" :forward="require('@/assets/enterprise/forward.svg')"/>
+      <listRow :onClick="()=>goTo('/join-enterprise-organization-team',{})" :img="require('@/assets/enterprise/join_in.png')" title="加入企业/组织/团队" :forward="require('@/assets/enterprise/forward.svg')"/>
+      <listRow :isBorder=false :onClick="()=>goTo('/add-member',{})" :img="require('@/assets/enterprise/member.png')" title="添加成员" :forward="require('@/assets/enterprise/forward.svg')"/>
     </div>
   </div>
 </template>

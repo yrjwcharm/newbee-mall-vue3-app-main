@@ -1,6 +1,6 @@
 <template>
   <div @click="myClick" style="background: #fff;padding-left: 10px;padding-right: 10px;">
-    <div :style="`display: flex;flex-direction: column;justify-content: center; height:45px;border-bottom:${border?'2px':0} solid #eee;`">
+    <div :style="`display: flex;flex-direction: column;justify-content: center; height:45px;border-bottom:${border?'1px':0} solid #eee;`">
       <div style="display:flex;flex-direction: row;align-items: center;justify-content: space-between">
         <p style="font-size: 16px;color: #333333;">{{label}}</p>
         <p style="align-items: center;display: flex;">
