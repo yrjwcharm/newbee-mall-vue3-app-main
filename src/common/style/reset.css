@@ -26,10 +26,10 @@ img{
 }
 /*清除浮动破坏带来的塌陷问题*/
 /*清除浮动的兼容IE*/
-.clearfloat {
+.clearFloat {
     zoom: 1;
 }
-.clearfloat:after {
+.clearFloat:after {
     display:block;
     clear:both;
     content:"";
