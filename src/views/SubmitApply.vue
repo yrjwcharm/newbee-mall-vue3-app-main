@@ -49,7 +49,7 @@
         />
       </van-popup>
     </div>
-    <div @click="goTo('/apply-status',{})" class="footer">
+    <div  class="footer">
       <div style="display: flex;height:50px;background: #06B48D;" @click="submit">
         <span style="margin: auto;font-size: 16px;color: #FFFFFF;">提交申请</span>
       </div>
@@ -93,7 +93,7 @@ export default {
       router.push({path: r, query: query || {}})
     }
     const submit = () => {
-
+      goTo('/apply-status',{});
     }
     return {
       ...toRefs(state),
