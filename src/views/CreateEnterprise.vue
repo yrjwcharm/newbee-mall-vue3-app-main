@@ -8,7 +8,7 @@
         <div>
           <p class="site-enterprise" style="margin-bottom: 5px;">所在企业</p>
           <input ref="nameRef" type="text"
-                 style="padding-left: 0; font-size: 18px;color: #999999; " placeholder="请输入企业名称">
+                 style="padding-left: 0; font-size: 16px;color: #333; " placeholder="请输入企业名称">
         </div>
       </div>
       <ListItem label="所属行业" :value="industry" :onClick="()=>goTo('/selectIndustry',{})"/>

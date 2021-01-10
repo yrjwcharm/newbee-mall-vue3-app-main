@@ -27,7 +27,8 @@ import VerifyStatus from '../views/VerifyStatus'
 import AddMember from '../views/AddMember'
 import ShareTeamCode from '../views/ShareTeamCode'
 import JoinEnterprise from '../views/JoinEnterprise'
-
+import TeamCodeJoin from '../views/TeamCodeJoin'
+import SubmitApply from '../views/SubmitApply'
 
 const router = createRouter({
   history: createWebHashHistory(), // hash模式：createWebHashHistory，history模式：createWebHistory
@@ -102,6 +103,16 @@ const router = createRouter({
       path:'/add-member',
       name:'add',
       component:AddMember
+    },
+    {
+      path:'/team-code-join',
+      name:'team-code-join',
+      component:TeamCodeJoin
+    },
+    {
+      path:'/submit-apply',
+      name:'submit-apply',
+      component:SubmitApply
     },
     {
       path: '/home',
