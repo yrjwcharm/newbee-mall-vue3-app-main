@@ -3,21 +3,28 @@
     <sHeader name="''"/>
     <div class="main">
       <div style="background: #FEFFFF;border-radius: 10px; padding-top: 44px;padding-bottom: 28px;">
-        <div style="display: flex;flex-direction: column;align-items: center">
+        <div v-if="applyStatus===1" style="display: flex;flex-direction: column;align-items: center">
           <img src="@/assets/enterprise/checked.svg" style="width: 65px;height:65px;" alt="">
           <p style="margin-top: 8px; font-size: 18px;color: #333333;">申请已提交</p>
-          <p style="margin-top:8px; font-size: 14px;color: #999;">正在等待管理员审核</p>
+          <p style="margin-top:8px; margin-bottom: 118px; font-size: 14px;color: #999;">正在等待管理员审核</p>
         </div>
-        <p style="margin-left: 9px; margin-top:118px; display:flex;flex-direction: row;align-items: center">
-          <img src="@/assets/enterprise/message.png" style="width: 12px;height: 12px;" alt="">
-          <span style="margin-left: 3px;font-size: 12px;color: #06B48D;">温馨提示</span>
-        </p>
-        <p style=" margin-top:5px; margin-left: 9px;font-size: 12px;color: #999999;">1. 我们承诺，资质审核时间最长不超过48个小时；</p>
-        <p style="margin-left: 9px;font-size: 12px;color: #999999;">2. 审核成功之后，我们将会系统发送一条系统消息通知到您，</p>
-        <p style="margin-left: 9px;font-size: 12px;color: #999999;">注意打开系统通知哦～</p>
+        <div v-if="applyStatus===2" style="display: flex;flex-direction: column;align-items: center">
+          <img src="@/assets/enterprise/error.svg" style="width: 65px;height:65px;" alt="">
+          <p style="margin-top: 8px; font-size: 18px;color: #333333;">申请被驳回</p>
+          <p style="margin-top:8px;margin-bottom: 118px; font-size: 14px;color: #999;">驳回原因：<span>您不是本公司员工</span></p>
+        </div>
+        <div v-if="applyStatus===1">
+          <p style="margin-left: 9px;  display:flex;flex-direction: row;align-items: center">
+            <img src="@/assets/enterprise/message.png" style="width: 12px;height: 12px;" alt="">
+            <span style="margin-left: 3px;font-size: 12px;color: #06B48D;">温馨提示</span>
+          </p>
+          <p style=" margin-top:5px; margin-left: 9px;font-size: 12px;color: #999999;">1. 我们承诺，资质审核时间最长不超过<span style="color:orange">48</span>个小时；</p>
+          <p style="margin-left: 9px;font-size: 12px;color: #999999;">2. 审核成功之后，我们将会系统发送一条系统消息通知到您，</p>
+          <p style="margin-left: 9px;font-size: 12px;color: #999999;">注意打开系统通知哦～</p>
+        </div>
       </div>
     </div>
-    <div  class="footer">
+    <div class="footer">
       <div style="display: flex;height:50px;background: #06B48D;" @click="submit">
         <span style="margin: auto;font-size: 16px;color: #FFFFFF;">确定</span>
       </div>
@@ -35,10 +42,10 @@ export default {
   components: {
     sHeader
   },
-  setup(){
+  setup() {
     const router = useRouter()
     const state = reactive({
-
+      applyStatus: 1
     })
     onMounted(async () => {
 
@@ -54,7 +61,7 @@ export default {
     const submit = () => {
       goBack();
     }
-    return{
+    return {
       ...toRefs(state),
       goTo,
       goBack,
@@ -78,6 +85,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .footer {
   display: flex;
   flex-direction: column;
