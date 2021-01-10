@@ -11,10 +11,10 @@
                  style="padding-left: 0; font-size: 16px;color: #333; " placeholder="请输入企业名称">
         </div>
       </div>
-      <ListItem label="所属行业" :value="industry" :onClick="()=>goTo('/selectIndustry',{})"/>
-      <ListItem label="人员规模" :value="scale" :onClick="showScaleListPicker"/>
-      <ListItem label="职务" :value="profession" :onClick="showProfessionListPicker"/>
-      <ListItem label="所在地区" :value="area" :onClick="showAreaListPicker"/>
+      <ListItem placeholder="请选择" label="所属行业" :value="industry" :onClick="()=>goTo('/selectIndustry',{})"/>
+      <ListItem placeholder="请选择" label="人员规模" :value="scale" :onClick="showScaleListPicker"/>
+      <ListItem placeholder="请选择" label="职务" :value="profession" :onClick="showProfessionListPicker"/>
+      <ListItem placeholder="请选择" label="所在地区" :value="area" :onClick="showAreaListPicker"/>
 
       <van-popup v-model:show="showScalePicker" round position="bottom">
         <van-picker
@@ -71,10 +71,10 @@ export default {
     const persons = ['1-9', '10-20', '21-50', '51-100', '101-200', '201-500', '501-2000','>2000'];
     const professions =['法人/CEO/负责人','人事主管','行政主管','IT主管','财务主管','市场主管','运营主管','其他主管','员工','其他'];
     const state = reactive({
-      industry: '请选择',
-      scale:'请选择',
-      profession:'请选择',
-      area:'请选择',
+      industry: '',
+      scale:'',
+      profession:'',
+      area:'',
       showScalePicker: false,
       showProfessionPicker:false,
       showAreaPicker:false,

@@ -3,7 +3,7 @@
     <div>
       <p class="site-enterprise" style="margin-bottom: 5px;">{{label}}</p>
       <input ref="nameRef" readonly  type="text" :value="value"
-             style="padding-left: 0;font-size: 16px;color: #333;  background: transparent "  placeholder="请选择部门">
+             style="padding-left: 0;font-size: 16px;color: #333;  background: transparent "  :placeholder="placeholder">
     </div>
     <img src="@/assets/enterprise/forward.svg" style="width: 9px;height:17px;">
   </div>
@@ -22,6 +22,10 @@ name: "ListItem",
       default: () => {
         return Function;
       },
+    },
+    placeholder:{
+      type:String,
+      default:'',
     },
     value:{
       type:String,
